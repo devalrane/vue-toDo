@@ -1,0 +1,372 @@
+{
+  "id": "34b98c2f-de6a-4e5f-a29d-79a3042d7dce",
+  "version": "2.0",
+  "name": "toDoTesting",
+  "url": "http://localhost:8000/",
+  "tests": [{
+    "id": "5582727b-a228-433b-92e4-71ae4ee6aa69",
+    "name": "test1",
+    "commands": [{
+      "id": "925f9ba3-d4f5-4afd-87f1-027316bfa523",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d76314d-43a6-4424-890d-4e3af40250e4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6104fb02-3f21-406b-bfd2-0d4ba71ed777",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=toDo.html",
+      "targets": [
+        ["linkText=toDo.html", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'toDo.html')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'toDo.html')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'toDo.html')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ed18b1e-c0c2-4b50-b89c-a66dd732c849",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-text",
+      "targets": [
+        ["css=.input-text", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='todo-app']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ca03903-82a6-46f2-977c-374c7c6a36d1",
+      "comment": "",
+      "command": "type",
+      "target": "css=.input-text",
+      "targets": [
+        ["css=.input-text", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='todo-app']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "This is the first job"
+    }, {
+      "id": "b05d19d1-696e-4ad2-91cc-2e8aecf1747e",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.input-text",
+      "targets": [
+        ["css=.input-text", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='todo-app']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "c6b5d211-6a76-4b1f-bb2c-664eb6e87554",
+      "comment": "",
+      "command": "type",
+      "target": "css=.input-text",
+      "targets": [
+        ["css=.input-text", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='todo-app']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "This is the second job"
+    }, {
+      "id": "095764ac-25dd-460c-9a86-8ed064fb416a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-warning",
+      "targets": [
+        ["css=.btn-warning", "css:finder"],
+        ["xpath=//div[@id='todo-app']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Job')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "620f33c5-88e2-4bff-b289-3cb3d7e7c4ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-items:nth-child(1) input",
+      "targets": [
+        ["css=.list-items:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@type='checkbox']", "xpath:attributes"],
+        ["xpath=//li[@id='li_it']/input", "xpath:idRelative"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "30b7c944-1813-4f52-9160-1fe1c286652d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-items:nth-child(1) input",
+      "targets": [
+        ["css=.list-items:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@type='checkbox']", "xpath:attributes"],
+        ["xpath=//li[@id='li_it']/input", "xpath:idRelative"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d095739-55aa-46f5-a163-5b2767b2269c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-items:nth-child(2) input",
+      "targets": [
+        ["css=.list-items:nth-child(2) input", "css:finder"],
+        ["xpath=(//input[@type='checkbox'])[2]", "xpath:attributes"],
+        ["xpath=(//li[@id='li_it']/input)[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0df2918b-5837-40bd-9a9d-3265c2226e46",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-items:nth-child(2) input",
+      "targets": [
+        ["css=.list-items:nth-child(2) input", "css:finder"],
+        ["xpath=(//input[@type='checkbox'])[2]", "xpath:attributes"],
+        ["xpath=(//li[@id='li_it']/input)[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a93413f3-989c-4282-8805-1e6c01720c11",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='todo-app']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Check All')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3573f347-94fe-4764-bb15-161a71037488",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='todo-app']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Check All')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "acfa58fa-8400-48ec-b47a-31c2eeb5a3e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='todo-app']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Check All')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "85f1b569-b963-4a26-aa49-a28fdb1e0b15",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "css=.btn:nth-child(1)",
+      "targets": [
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='todo-app']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Check All')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e9cae92-2d6e-480c-a73e-32643af5887b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-items:nth-child(2) .btn-del",
+      "targets": [
+        ["css=.list-items:nth-child(2) .btn-del", "css:finder"],
+        ["xpath=(//li[@id='li_it']/button)[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/li/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "30cdf3b3-c0b8-4a16-840e-1ca908f25ce4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-text",
+      "targets": [
+        ["css=.input-text", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='todo-app']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ddefadd1-384a-4dde-953b-180d80ff56e9",
+      "comment": "",
+      "command": "type",
+      "target": "css=.input-text",
+      "targets": [
+        ["css=.input-text", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='todo-app']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "This is another job"
+    }, {
+      "id": "1655f029-de66-4a44-85c2-e73a05e6f654",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.input-text",
+      "targets": [
+        ["css=.input-text", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='todo-app']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "7a267d78-354e-4a42-afa3-3285ca0b45d4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-items:nth-child(1) input",
+      "targets": [
+        ["css=.list-items:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@type='checkbox']", "xpath:attributes"],
+        ["xpath=//li[@id='li_it']/input", "xpath:idRelative"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f0fc668-b617-451c-acfc-faaed3d912ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(2)",
+      "targets": [
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='todo-app']/div/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Clear Completed')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46146ac7-095f-4e17-b852-1994b85d1f6e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-text",
+      "targets": [
+        ["css=.input-text", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='todo-app']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd63383c-262a-432a-90a7-838dc01fe7e0",
+      "comment": "",
+      "command": "type",
+      "target": "css=.input-text",
+      "targets": [
+        ["css=.input-text", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='todo-app']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "This is the last job"
+    }, {
+      "id": "fd52cd2c-a1bb-4a7b-875b-542bbbb8d612",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-warning",
+      "targets": [
+        ["css=.btn-warning", "css:finder"],
+        ["xpath=//div[@id='todo-app']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Job')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1714978a-e797-4a0b-801d-7c73fdf7a860",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn-warning",
+      "targets": [
+        ["css=.btn-warning", "css:finder"],
+        ["xpath=//div[@id='todo-app']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Job')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a438314e-2e27-4083-956c-1734f829cdf7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-items:nth-child(2) input",
+      "targets": [
+        ["css=.list-items:nth-child(2) input", "css:finder"],
+        ["xpath=(//input[@type='checkbox'])[2]", "xpath:attributes"],
+        ["xpath=(//li[@id='li_it']/input)[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7a4af71-35db-4911-b2ab-20c14ee0c116",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-items:nth-child(1) input",
+      "targets": [
+        ["css=.list-items:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@type='checkbox']", "xpath:attributes"],
+        ["xpath=//li[@id='li_it']/input", "xpath:idRelative"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b26bed94-4ae7-4bdd-bd4d-27f14c5d6b7b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-items:nth-child(1) input",
+      "targets": [
+        ["css=.list-items:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@type='checkbox']", "xpath:attributes"],
+        ["xpath=//li[@id='li_it']/input", "xpath:idRelative"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13bbeca5-e1d2-4c84-bf50-d25df0c72fd4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(3)",
+      "targets": [
+        ["css=.btn:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='todo-app']/div/div[2]/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Clear All')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "1f0dc4e0-2ed1-4772-a04f-5573eafdfefa",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:8000/"],
+  "plugins": []
+}

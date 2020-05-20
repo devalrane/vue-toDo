@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>todo-vue</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div id="todo-app">
+
+        <div class="jumbotron">
+
+            <div class="header">
+                <i class="fas fa-pen-alt icon"> TODO</i>
+            </div>
+
+
+
+            <input type="text" class="form-control input-text" style="width:60%; margin:auto; margin-top:15px;" v-model="newListEntry" @keyup.enter="saveMe" placeholder="Enter a job to be done.....">
+            <!--<input type="date" class="form-control"style="width:60%; margin:auto; margin-top:8px;"></input>-->
+            <br>
+
+            
+            <button class="btn btn-warning btn-add" style="width:10%; margin-left: 45%;" :disabled="newListEntry.length === 0" @click="saveMe">Add Job</button>
+            <br>
+            <div class="btn-group">
+                <button class="btn btn-outline-warning" :disabled="list.length === 0" @click="checkAll" @dblclick="uncheckAll">Check All</button>
+                <button class="btn btn-outline-warning" :disabled="list.length === 0" @click="clearCompleted">Clear Completed</button>
+                <button class="btn btn-outline-warning" :disabled="list.length === 0" @click="clearAll">Clear All</button>
+            </div>
+
+        
+        
+
+            <div class="display-list" style="font-size:30px;">
+                <ul type="none" class="list-group">
+                    <div class="list-items" v-for="(item,index) in list">                   
+                        
+                        <li id="li_it" class="list-group-item">
+                            <input type="checkbox" v-model="item.complete">
+                                <del class="display-job" v-if="item.complete">{{ item.job }}</del>
+                                <span class="display-job" v-else>{{ item.job }}</span>
+                            
+                            </input> 
+                           <button class="btn-del" @click="deleteJob(index)"></button>
+                        </li>                      
+                    
+                        
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="vue.min.js"></script>
+    <script>
+        var toDoApp = new Vue({
+            el: "#todo-app",
+            data: {
+                newListEntry: '',
+                noOfIncJobs: 1,
+                list: [
+                    
+                ]                
+            },
+            methods: {
+                saveMe: function() {
+                    if(this.newListEntry !== '')
+                    {
+                        this.list.push({job:this.newListEntry, complete:false});
+                        this.newListEntry = '';
+                        this.noOfIncJobs = this.noOfIncJobs+1;
+                    }                    
+                },
+
+                deleteJob: function(index) {
+                    this.list.splice(index, 1);
+                    this.noOfIncJobs -= 1;
+                },
+
+                checkAll: function() {
+                    for(i=0;i<=this.list.length;i++)
+                    {
+                        this.list[i].complete=true;
+                    }
+                },
+
+                uncheckAll: function() {
+                    for(i=0;i<=this.list.length;i++)
+                    {
+                        this.list[i].complete=false;
+                    }
+                },
+
+                clearCompleted: function() {
+                    var i=0;
+                    for(i=0;i<=this.list.length;)
+                    {
+                        if(this.list[i].complete === true){
+                            this.list.splice(i,1);
+                            continue;                          
+                        }
+                        i++;
+                        
+                    }
+
+                },
+
+                clearAll: function(){
+                    this.list=[];
+                }
+
+                
+            },
+            
+            mounted(){
+                var fetchedData = localStorage.getItem('list');
+               // alert(fetchedData);
+                if(fetchedData) {
+                    this.list = JSON.parse(fetchedData);
+                }
+            },
+            watch: {
+                list: {
+                    handler(newList){
+                        localStorage.setItem('list', JSON.stringify(newList));
+                    },
+                },
+            }
+
+            
+        });
+    
+    
+    </script>
+</body>
+</html>
